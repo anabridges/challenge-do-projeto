@@ -1,26 +1,44 @@
-let tentativas = []; // Inicializa um array vazio para armazenar os nomes
+let tentativas = []; 
 
 function adicionarAmigo(nome) {
-    tentativas.push(nome); // Adiciona o nome ao array tentativas
-    atualizarListaAmigos(); // Atualiza a lista exibida
+    tentativas.push(nome); 
+    atualizarListaAmigos(); 
 }
 
 function atualizarListaAmigos() {
     const listaAmigos = document.getElementById('listaAmigos');
-    listaAmigos.innerHTML = ''; // Limpa a lista antes de atualizar
+    listaAmigos.innerHTML = ''; 
     tentativas.forEach(amigo => {
-        const li = document.createElement('li'); // Cria um novo elemento li
-        li.textContent = amigo; // Define o texto do li como o nome do amigo
-        listaAmigos.appendChild(li); // Adiciona o li à lista
+        const li = document.createElement('li'); 
+        li.textContent = amigo; 
+        listaAmigos.appendChild(li); 
     });
 }
 
 function sortearAmigo() {
     if (tentativas.length === 0) {
-        alert('Não há amigos para sortear.'); // Alerta se não houver amigos
+        alert('Não há amigos para sortear.'); 
         return;
     }
-    let indiceAleatorio = Math.floor(Math.random() * tentativas.length); // Gera um índice aleatório
-    let amigoSorteado = tentativas[indiceAleatorio]; // Retorna o nome do amigo sorteado
-    exibirResultado(amigoSorteado); // Exibe o resultado
+    let indiceAleatorio = Math.floor(Math.random() * tentativas.length); 
+    let amigoSorteado = tentativas[indiceAleatorio]; 
+    exibirResultado(amigoSorteado); 
 }
+
+function exibirResultado(amigo) {
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = ''; 
+    const li = document.createElement('li'); 
+    li.textContent = `Amigo sorteado: ${amigo}`; 
+    resultado.appendChild(li); 
+}
+
+document.getElementById('botaoAdicionar').addEventListener('click', function() {
+    let nome = document.getElementById('nomeAmigo').value; 
+    if (nome) { 
+        adicionarAmigo(nome); 
+        document.getElementById('nomeAmigo').value = ''; 
+    } else {
+        alert('Por favor, digite um nome!'); 
+    }
+});
