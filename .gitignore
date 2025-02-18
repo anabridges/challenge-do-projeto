@@ -1,3 +1,43 @@
+AppData/
 temp/
-*.idx
-\cache
+arquivo.txt
+.vscode/
+*.pub
+*.class
+node_modules/
+npm-debug.log
+*.log
+Captura de tela/
+*.zip
+*.jpg
+*.png
+OneDrive/
+# Ignorar a Área de Trabalho
+Desktop/
+# Ignorar a pasta de Imagens
+Pictures/
+Searchs/
+dist/
+*.exe
+Videos/
+ntuser.dat
+desktop/
+ntuser.ini
+MicrosoftEdge/
+NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000002.regtrans-ms
+NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TM.blf
+ntuser.dat.LOG1
+.gitignore
+ntuser.dat.LOG2
+Searches/Indexed Locations.search-ms
+Searches/winrt--{S-1-5-21-3116826961-3521754190-2322785866-1001}-.searchconnector-ms
+Searches/desktop.ini
+.ssh/id_ed25519
+.node_repl_history
+.gitconfig
+.bash_history
+Searches/Everywhere.search-ms
+.ssh/known_hosts
+.ssh/known_hosts.old
+
